@@ -1,0 +1,32 @@
+@import "../../../index.scss";
+
+.main-block-basket-page {
+  @apply pt-[30px];
+
+  &__title {
+    @apply text-[55px] font-medium leading-[110%] mb-[26px];
+  }
+
+  &__location {
+    @apply mb-[30px];
+    span {
+      cursor: pointer;
+      &:hover {
+        color: #6e9c9f;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  &__item {
+    @apply text-[20px] font-medium leading-[140%];
+  }
+
+  &__link-login {
+    cursor: pointer;
+    &:hover {
+      color: #6e9c9f;
+      transition: all 0.3s ease-in;
+    }
+  }
+}

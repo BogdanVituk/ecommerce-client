@@ -1,0 +1,88 @@
+.main-contact {
+  padding: 15px 0 30px 0;
+
+  &__title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+    margin-bottom: 26px;
+  }
+
+  &__location {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    padding-bottom: 50px;
+
+    span {
+      color: #919191;
+      font-size: 17px;
+    }
+  }
+}
+
+.body-items {
+  &__item {
+    color: 17px;
+    font-weight: 500;
+    line-height: 140%;
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+}
+
+.form-contact {
+  margin-top: 40px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    margin-bottom: 62px;
+  }
+
+  &__input {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    input {
+      position: relative;
+      &::after {
+        background-color: black;
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        top: 0;
+        left: 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__text-area {
+    textarea:focus {
+      outline: none;
+    }
+    textarea {
+      resize: none;
+    }
+  }
+
+  button {
+
+    background-color: #6E9C9F;
+    color: white;
+    padding: 22px 50px;
+
+    &:hover {
+        background-color: #509498;
+        transition: all .3s ease-in;
+    }
+  }
+}
