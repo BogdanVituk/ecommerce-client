@@ -50,6 +50,7 @@
 
     input {
       position: relative;
+      display: flex;
       &::after {
         background-color: black;
         position: absolute;

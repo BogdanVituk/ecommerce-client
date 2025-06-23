@@ -3,7 +3,7 @@ import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useAppDispatch } from '../../../types/storeFunc';
 
-import { toggleIsAuth, loginUser } from '../../../store/UserSlice';
+import { loginUser } from '../../../store/UserSlice';
 import { LoginModalFormInputs } from '../../../types/inputs';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
@@ -11,14 +11,15 @@ import { toggleVisLoginModal } from '../../../store/ModalsSlice';
 
 const LoginForm = () => {
 
-    const { register, handleSubmit, reset } = useForm<LoginModalFormInputs>();
+    const { register, handleSubmit, reset } = useForm<LoginModalFormInputs>({
+        mode: 'onChange'
+    });
 
     const dispatch = useAppDispatch();
     
     const onSubmit: SubmitHandler<LoginModalFormInputs> = (data) => {
         dispatch(loginUser(data))
-        reset()
-        dispatch(toggleVisLoginModal())
+       
     }
 
 

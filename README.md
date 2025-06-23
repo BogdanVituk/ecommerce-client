@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# 🛒 E-Commerce SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Це односторінковий застосунок (SPA) для онлайн-магазину, який взаємодіє з бекендом через REST API. Реалізовано авторизацію, перегляд товарів, додавання в корзину, збереження сесії через JWT.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Стек технологій
 
-### `npm start`
+- **Frontend:** React, Redux Toolkit, Bootstrap, React Router, Axios, SASS
+- **Auth:** JWT (збереження токену в `localStorage`)
+- **State:** Redux + Redux Thunk / RTK Query
+- **API:** Platzi Fake Store API - готове апі
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🔑 Основні функції
 
-### `npm test`
+- 🔐 Реєстрація та логін користувача (JWT токен)
+- 🛍️ Перегляд списку товарів (отримання з API)
+- 🛒 Кошик з додаванням, видаленням та збереженням товарів
+- 📦 Перевірка замовлення
+- 💾 Збереження стану сесії через `localStorage`
+- ⚠️ Захищені маршрути (перевірка токена при навігації)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📸 Скріншоти
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Головна                         | Сторінка товара                   | Товари                                 | Кошик                           | 
+| ------------------------------- |---------------------------------- |--------------------------------------- | ------------------------------- |
+| ![Home](./screenshots/home1.png)|  ![Home](./screenshots/product.png) | ![Products](./screenshots/products.png)| ![Cart](./screenshots/cart1.png)|
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Як запустити
 
-### `npm run eject`
+### 🔧 Клонуй репозиторій:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/yourusername/ecommerce-spa.git
+cd ecommerce-spa
+npm install
+```

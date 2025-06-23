@@ -32,7 +32,7 @@ export const loginUser = createAsyncThunk<IRegisterResponce, LoginModalFormInput
 
         return data;
         } catch (error) {
-            console.log(error)
+            
             return thunkApi.rejectWithValue(error)
         }
     }

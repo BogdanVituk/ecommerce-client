@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const MainContact: FC = (props) => {
 
 
-    const { register, handleSubmit, reset } = useForm<inputsFormContant>({
+    const { register, handleSubmit, reset, formState: {errors} } = useForm<inputsFormContant>({
         mode: 'onChange'
     })
 
@@ -50,18 +50,22 @@ const MainContact: FC = (props) => {
                     <form onSubmit={handleSubmit(onSubmit)} className="body-items__form form-contact">
                         <div className='form-contact__title'>Write to us</div>
                         <div className='form-contact__input'>
-                            <input {...register('name')} type="text" placeholder='Имя' />
+                            <input {...register('name', { required: true })} type="text" placeholder="Name" />
+                            {errors.name && <span>This field is required</span>}
                         </div>
                         <div className='form-contact__input'>
-                            <input {...register('email')} type="email" placeholder='E-mail'/>
+                            <input {...register('email',{ required: true })} type="email" placeholder='E-mail'/>
+                            {errors.email && <span>This field is required</span>}
                         </div>
                         <div className='form-contact__input'>
-                            <input {...register('tel')} type="tel" placeholder='Телефон'/>
+                            <input {...register('tel', { required: true })} type="tel" placeholder='Phone'/>
+                            {errors.tel && <span>This field is required</span>}
                         </div>
                         <div className='form-contact__text-area'>
-                            <textarea {...register('text')} name="text" id="" cols={30} rows={3} placeholder='Your messages'>
+                            <textarea {...register('text', { required: true })} name="text" id="" cols={30} rows={3} placeholder='Your messages'>
 
                             </textarea>
+                            {errors.text && <span>This field is required</span>}
                         </div>
                         <button>Send</button>
                     </form>
