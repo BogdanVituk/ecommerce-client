@@ -37,7 +37,7 @@
 ### 🔧 Клонуй репозиторій:
 
 ```bash
-git clone https://github.com/yourusername/ecommerce-spa.git
+git clone https://github.com/BogdanVituk/ecommerce-client.git
 cd ecommerce-spa
 npm install
 ```
